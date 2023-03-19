@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  k6:
+    image: grafana/k6:0.43.1
+    container_name: k6-load
+    hostname: k6
+    volumes:
+      - ./script.js:/home/k6/script.js
+
+networks:
+  k6:
